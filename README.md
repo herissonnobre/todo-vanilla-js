@@ -4,6 +4,10 @@ A TODO list web application built with **vanilla HTML, CSS and JavaScript** - su
 
 **Live Demo:** [https://herissonneves.github.io/todo-vanilla-js/](https://herissonneves.github.io/todo-vanilla-js/)
 
+## 📦 Current version
+
+**v1.0** — stable release. This version includes: core features (add / mark complete / remove tasks), persistence (localStorage), filters (all / active / completed), clear-completed, responsive layout.
+
 ## Demo
 
 ![Todo List Demo - Add and Remove](demo/add-and-remove.gif)
@@ -70,6 +74,7 @@ A TODO list web application built with **vanilla HTML, CSS and JavaScript** - su
 
 ## 🧪 Future Improvements (Todo)
 
+- Implement layout using Material UI 3
 - Edit existing tasks (change text)
 - Clear all tasks / clear all completed
 - Drag & drop to reorder tasks
