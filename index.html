@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="A simple and efficient todo list app to manage your daily tasks" name="description" />
-  <meta content="#6750A4" name="theme-color" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple and efficient todo list app to manage your daily tasks" />
+  <meta name="theme-color" content="#6750A4" />
   <title>Todo List App</title>
   
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -40,7 +40,7 @@
         Add Task
       </button>
     </div>
-    
+  
   </form>
   
   <!--  Filter Block -->
@@ -79,19 +79,19 @@
           class="todo-clear__button"
           type="button"
           aria-label="Clear all completed tasks">
-        <svg aria-hidden="true" width="20px" height="20px" viewBox="0 -960 960 960">
+        <svg aria-hidden="true" height="20px" viewBox="0 -960 960 960" width="20px">
           <path
               d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z" />
         </svg>
         Clear Completed
       </button>
     </div>
-    
+  
   </section>
   
   <!-- Task List -->
   <ul id="todo-list" class="todo-page__list" aria-label="Task list" aria-live="polite"></ul>
-  
+
 </main>
 
 <script src="./js/main.js" type="module"></script>
