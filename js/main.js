@@ -1,5 +1,5 @@
-import { addTask, clearCompleted } from "./modules/todo.js";
-import { renderTasks } from "./modules/ui.js";
+import {addTask, clearCompleted} from "./modules/todo.js";
+import {renderTasks} from "./modules/ui.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   renderTasks();
@@ -7,6 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("todo-form");
   const input = document.getElementById("todo-input");
   const btnClear = document.getElementById('clear-completed');
+
+  const filterButtons = document.querySelectorAll(".todo-filters__button");
+
+  function setActiveFilter(activeId) {
+    filterButtons.forEach(btn =>
+      btn.classList.remove("todo-filters__button--active")
+    );
+
+    const activeBtn = document.getElementById(activeId);
+    if (activeBtn) {
+      activeBtn.classList.add("todo-filters__button--active");
+    }
+  }
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -21,18 +34,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("filter-all").addEventListener("click", () => {
-    const filter = "all";
-    renderTasks(filter);
+    setActiveFilter("filter-all");
+    renderTasks("all");
   });
 
   document.getElementById("filter-active").addEventListener("click", () => {
-    const filter = "active";
-    renderTasks(filter);
+    setActiveFilter("filter-all");
+    renderTasks('active');
   });
 
   document.getElementById("filter-completed").addEventListener("click", () => {
     const filter = "completed";
-    renderTasks(filter);
+      renderTasks(filter);
   });
 
   btnClear.addEventListener('click', () => {
